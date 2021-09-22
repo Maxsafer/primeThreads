@@ -1,18 +1,12 @@
-/**
- * Write a multithreaded program that outputs prime numbers.
- * This program should work as follows:
- * The user will run the program and will enter a number on the command line.
- * The program will then create a separate thread that outputs
- * all the prime numbers less than or equal to the number entered by the user.
- *
- * Most Unix/Linux/OS X users
- * gcc threadLab.c -lpthread
- *
- *
- * Figure 4.6
- *
- * @authors 
- * Operating System ITESM CSF
+/*
+ Write a multithreaded program that outputs prime numbers.
+ This program should work as follows:
+ The user will run the program and will enter a number on the command line.
+ The program will then create a separate thread that outputs all the prime numbers less than or equal to the number entered by the user.
+
+
+ @authors A01027541, A00826156, A01364718, A01335324
+ Operating System ITESM CSF
  */
 
 #include <pthread.h>
@@ -72,7 +66,7 @@ void *runner(void *param)
                 break;
             }
         }
-        //iteración del 2 al upper e imprimimos sólo los que si
+        //Iteración del 2 al upper e imprimimos sólo los que si
         if (trap == 0)
         {
             printf("[%d] ", i);
